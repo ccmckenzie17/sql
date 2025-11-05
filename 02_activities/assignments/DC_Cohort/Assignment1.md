@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-one`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [x ] Create a branch called `assignment-one`.
+- [x ] Ensure that the repository is public.
+- [x ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [x ] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -206,4 +206,9 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 ```
 Your thoughts...
+
+This article explores several interesting points about how our preconceptions about the world can shape how we design and analyse data systems. As mentioned, gender is a prime example. A simplified view of gender as a binary system may lead us to only collect data on if a participant is male or female with no alternate, or write a query that overlooks not only data, but people. It is important in data and information sciences seek to understand the world and it is and not just as we think it should be. One way to do this could be to include inclusive ways of answering forms, for example, including an "other" option that lets people fill in their own answers. Another is to carefully look at what information is in a dataset before just assuming (ie, query for distinct values in a gender column, not just assuming all the responses are "male" or "female").
+
+Another example that comes to mind is with polling data. As we've seen repeatedly in the last decade or two election polling is infamously not very good at predicting actual election results. Even polls with large datasets of thousands or even tens of thousands of respondents tend to not be very reliable. Just looking at the data itself may not offer many answers if you see that all of these respondents from a given region indicate they are likely to vote one way but then the actual result inexplicably go the other way. In this case as we've seen the issue is usual in the broader context of how the database was collected and the subtle biases introduced there. For example polling done by calling landlines will miss many young people and people of a lower socioeconomic status who do not have landlines which introduces significant bias. These polls often have many people who refuse to participate for one reason or another and perhaps those non-responders are more likely to vote for a certain candidate. These examples highlight the need to understand the context around our data as well as the values within. 
+
 ```

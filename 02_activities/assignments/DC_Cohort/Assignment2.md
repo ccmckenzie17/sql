@@ -55,6 +55,17 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+
+Type 1 - Overwriting previous addresses 
+
+The first version of this database architecture would overwrite previous entries and not retain previous
+ones. This CUSTOMER_ADDRESS table may have columns "customer_id" and "address”, so each customer is associated with one address. If a customer changes their address then that entry (row) will be updated so that for that given "customer_id" the old "address" is replaced with the new one. Here "customer_id" is a natural key and no surrogate key is needed. 
+
+Type 2 - keeping new entries and new rows
+
+In the type 2 version the table would have 3 columns "customer_key", "customer_id", and "address, where "customer_key" could take the value of "customer_id" plus an index number for the number of addresses associated with that customer (if "customer_id" = 123 and they have two listed addresses then "customer_key" = 123_2). With this system cahnges can be tracked so when a customer updates their address it is added as a new row with the "customer_key" incrimenting up by 1 and saving the old addresses which are associated with previous keys. In this system the "customer_id" is still the natural key and "customer_key" is a surrogate key.
+
+
 ```
 
 ***
@@ -184,4 +195,33 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+
+This article raises the very salient point that all of our technological advancements (particularly in 
+recent AI developments) are built on the back of tedious, and often under-compensated and 
+under-attributed, manual labour. Vicki Boykis details how something critical to AI like having properly 
+labelled image databases requires thousands of hours of manual sorting, labelling, and quality control.
+Not to mention a foundation of older infrastructure like WordNet. The article doesn't even have the 
+space to get into other examples of human work needed for these technologies, for example all of those 
+15 million images were first photos taken by people and uploaded on the internet so they could 
+appear in search engines. 
+
+This article also made me think about some of the recent hype around AI in my own field of 
+neuroscience and how it can often highlight just how powerful humans are. AI has helped with several big 
+problems in neuroscience like AlphaFold which uses AI to predict and decode protein structures far more 
+efficiently than previous methods, or in advancing our ability to train and test computational models of 
+brain systems. But the limitations of AI are just as apparent. Overall, neuroscience hasn't moved 
+forward due to AI, and the advancements we have seen are from it being used as a tool by human scientist 
+who have put in a monumental amount of work themseleves and thought very carefully about what problems 
+are out there that can be solved by AI. I think people also forget just how impressive humans are and 
+are quick to disregard human capability in favour of new tech. The human brain has 80 billion neurons 
+(not to mention glial cells) and over 100 trillion synapses, it has been honed over millions of years of
+evolution, and it is incredibly adaptable to an individual’s experiences. The human brain is thought to 
+have storage space equivalent to 2.5 million gigabytes, and I'm sceptical about if you even can put a 
+limit on that. Not to mention that "storage" is even just a tiny fraction of what the brain does when it 
+is more focuses on sensation, movement, and cognition. All this to say, I take issue with people saying 
+things like "AI will be smarter than people soon" or "AI will advance science so much faster than 
+before". Maybe when the world's best supercomputers have the same complexity and computational power as 
+a mouse's brain then I'll reconsider. AI, like all technologies, is a powerful tool for humans to use 
+but not a replacement for humanity.
+
 ```
